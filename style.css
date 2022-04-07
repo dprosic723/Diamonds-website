@@ -173,8 +173,10 @@ a.scroll-down{
 .services{
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 40px auto;
+
     transition: box-shadow ease 350ms;
+    max-width:min(300px, 90%);
 }
 .services:hover{
     box-shadow: 0 0 20px rgba(51, 51, 51, 0.19);
@@ -191,16 +193,119 @@ a.scroll-down{
 .images img:first-child{
     margin: 10px;
 }
-.services h2{
+.services h2,
+.how-we-do h2{
     font-weight: 400;
     font-size: 25px;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
 }
-.services p{
+.services p,
+.how-we-do p
+{
     font-weight: 400;
     line-height: 30px;
     margin:20px;
+}
+
+.how-we-do{
+    background-image: url("images/diamond-cover.png");
+    background-size: cover;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+.how-container h2{
+    text-align: left;
+}
+.how-container{
+    width: min(300px, 90%);
+    margin: 10px auto;
+    background-color: #001a3e;
+}
+
+.contact-form{
+    background-image: url("images/triangles2.svg");
+    background-size: cover;
+    background-position: bottom right;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+}
+.contact-form input, .contact-form textarea{
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+    margin:10px;
+    border:0;
+    max-width: 300px;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 400;
+    opacity: 1;
+}
+
+
+.contact-form h2{
+    text-align: center;
+    margin: 30px;
+}
+.contact-form button{
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 150px;
+    border:0;
+    background-color:#0323dd;
+    padding: 15px 25px;
+    color: white;
+    transition: background-color ease 350ms;
+    cursor: pointer;
+    margin:10px;
+}
+.contact-form button:hover{
+    background-color: #4fa19d;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+footer ul{
+    list-style-type: none;
+}
+footer a{
+    text-decoration: none;
+    color: #001a3e;
+}
+footer a:hover{
+    color:#6ee1dc;
+    transition: color ease 350ms;
+}
+footer li{
+    padding-block: 10px;
+}
+footer .adress, footer .email{
+    display: flex;
+    align-items: center;
+}
+.address-mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+.address-mail p{
+    margin-left: 10px;
 }
 @media (max-width:750px) {
     .hamburger{
